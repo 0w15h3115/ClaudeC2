@@ -1,0 +1,33 @@
+# Agent Configuration Template
+
+agent:
+  # Connection settings
+  callback_url: "https://c2.example.com"
+  session_id: "SESSION_ID_HERE"
+  
+  # Timing
+  sleep_interval: 60
+  jitter: 10
+  initial_delay: 0
+  
+  # Security
+  encryption_key: "ENCRYPTION_KEY_HERE"
+  verify_ssl: false
+  
+  # Behavior
+  max_retries: 3
+  timeout: 30
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  
+  # Kill switch
+  kill_date: null  # ISO format: "2024-12-31T23:59:59"
+  working_hours: null  # e.g., "09:00-17:00"
+  
+  # Persistence
+  persist_on_startup: false
+  persistence_method: "registry"  # registry, scheduled_task, service
+  
+  # Evasion
+  anti_debugging: true
+  anti_sandbox: true
+  process_injection: false
